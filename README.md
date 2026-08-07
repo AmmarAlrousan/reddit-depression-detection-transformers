@@ -1,47 +1,34 @@
 # 🧠 Reddit Depression Detection using Transformer Models
 
-A Natural Language Processing (NLP) project for automatic depression detection from Reddit posts using transformer-based language models.
-
-The project compares multiple pretrained transformer architectures and provides an interactive Gradio interface for real-time prediction.
+Transformer-based Natural Language Processing (NLP) system for early depression detection from Reddit posts using **MiniLM** and **ELECTRA** with an interactive **Gradio** interface.
 
 ---
 
-## Overview
+## 📖 Overview
 
-This project aims to classify Reddit posts into:
+Mental health issues have become increasingly prevalent on social media platforms. This project leverages state-of-the-art transformer language models to automatically identify depressive patterns in Reddit posts.
 
-- 🟢 Non-Depressed
-- 🔴 Depressed
-
-using fine-tuned transformer models trained on Reddit text.
+The system compares two fine-tuned transformer architectures and allows users to evaluate predictions through an interactive Gradio web application.
 
 ---
 
-## Models
-
-| Model | Purpose |
-|-------|---------|
-| MiniLM | Depression Classification |
-| ELECTRA | Depression Classification |
-
----
-
-## Features
+## ✨ Features
 
 - Depression detection from Reddit posts
-- Fine-tuned MiniLM model
-- Fine-tuned ELECTRA model
+- Fine-tuned MiniLM transformer
+- Fine-tuned ELECTRA transformer
+- Side-by-side model comparison
 - Interactive Gradio interface
-- Model comparison
-- Transformer-based NLP pipeline
+- Real-time inference
+- Easy deployment and testing
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
 reddit-depression-detection-transformers/
-
+│
 ├── Models/
 │   ├── nreimers MiniLM Model/
 │   └── saved_model_electra/
@@ -50,17 +37,36 @@ reddit-depression-detection-transformers/
 ├── electra-small-discriminator.ipynb
 ├── GUI.ipynb
 ├── Gradio.py
-│
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## Installation
+## 🤖 Models Used
+
+| Model | Purpose |
+|--------|---------|
+| MiniLM | Depression Classification |
+| ELECTRA | Depression Classification |
+
+---
+
+## 📊 Dataset
+
+The models were trained and evaluated on a balanced Reddit depression dataset containing posts labeled as:
+
+- 🔴 Depressed
+- 🟢 Non-Depressed
+
+The text was preprocessed and tokenized using Hugging Face tokenizers before fine-tuning.
+
+---
+
+## ⚙️ Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/reddit-depression-detection-transformers.git
+git clone https://github.com/AmmarAlrousan/reddit-depression-detection-transformers.git
 
 cd reddit-depression-detection-transformers
 
@@ -69,15 +75,43 @@ pip install -r requirements.txt
 
 ---
 
-## Run
+## ▶️ Run
+
+Launch the Gradio interface:
 
 ```bash
 python Gradio.py
 ```
 
+After launching, open:
+
+```
+http://127.0.0.1:7860
+```
+
 ---
 
-## Technologies
+## 📈 Model Comparison
+
+The application loads both transformer models simultaneously and compares their predictions on the same Reddit post.
+
+### MiniLM
+
+- Lightweight architecture
+- Faster inference
+- Lower computational cost
+
+### ELECTRA
+
+- Strong contextual understanding
+- Robust transformer encoder
+- Competitive depression classification performance
+
+The Gradio interface enables real-time comparison between both models.
+
+---
+
+## 🛠 Technologies
 
 - Python
 - PyTorch
@@ -85,21 +119,58 @@ python Gradio.py
 - MiniLM
 - ELECTRA
 - Gradio
-- Scikit-learn
 - Pandas
+- NumPy
+- Scikit-learn
 
 ---
 
-## Future Improvements
+## 📸 Demo
 
-- Larger multilingual dataset
-- Explainable AI (XAI)
-- Confidence visualization
-- Multi-class mental health detection
-- Web deployment
+### Home Interface
+
+![Home](results/screenshots/home.png)
 
 ---
 
-## License
+### Prediction Example
 
-MIT License
+![Prediction](results/screenshots/prediction.png)
+
+---
+
+### Model Comparison
+
+![Comparison](results/screenshots/comparison.png)
+
+---
+
+## 🚀 Future Improvements
+
+- Support multilingual depression detection
+- Explainable AI (XAI) visualization
+- Confidence score visualization
+- Mental health multi-class classification
+- Cloud deployment
+- REST API integration
+- Larger benchmark datasets
+
+---
+
+## 📄 License
+
+This project is released under the MIT License.
+
+---
+
+## 👤 Author
+
+**Ammar Atef Alrousan**
+
+AI Engineer | NLP | Computer Vision | LLMs
+
+GitHub:
+https://github.com/AmmarAlrousan
+
+LinkedIn:
+https://www.linkedin.com/in/ammar-alrousan-681b252b6
